@@ -1,3 +1,7 @@
+#Look at https://github.com/Schlafhase/img2cat/wiki for explanation how to use the function
+
+
+
 import cv2
 import numpy as np
 from PIL import Image
