@@ -16,7 +16,7 @@ The function `create_mosaic` takes 6 arguments:
     cats_filepath = "./cat_images"
 
     cat_images = cat_image_mosaic.create_img_array(images_filepath=cats_filepath, img_size=25)
-    im = cv2.imread("input6.png")
+    im = cat_image_mosaic.read_image("input6.png") #You can also use cv2.imread() but you'll have to keep in mind that cv2.imread() reads the image in BGR by default, while the create_mosaic() function works with RGB
     
     cat_image_mosaic.create_mosaic(img=im, images_tuple=cat_images, resolution=75, cat_size=25, accuracy=5, logs=True)
 
@@ -27,5 +27,5 @@ Input Image:
 ![input6](https://github.com/Schlafhase/img2cat/assets/106097366/95c5b0d7-d552-4faf-98c1-a012cf740c48)
 
 Output Image:
-
+(The colors are reversed because I accidentaly used `cv2.imread()`)
 ![image](https://github.com/Schlafhase/img2cat/assets/106097366/f4e6fe9b-e54d-4079-bb29-e2a6f8d564ed)
